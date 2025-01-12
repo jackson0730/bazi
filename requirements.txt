@@ -1,1 +1,2 @@
-lunar-python
+lunar_python
+pyinstaller 
