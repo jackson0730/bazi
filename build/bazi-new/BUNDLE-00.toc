@@ -1,0 +1,3 @@
+([('bazi-new',
+   '/Users/jiangjun/Desktop/cursor code/bazi/dist/bazi-new',
+   'EXECUTABLE')],)
