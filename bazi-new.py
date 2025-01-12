@@ -1,6 +1,6 @@
 from lunar_python import Solar, Lunar
 from datetime import datetime
-import pandas as pd
+# import pandas as pd
 
 # 定义基础数据
 tiangan = ["甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸"]
@@ -364,18 +364,18 @@ def get_dayun(year_gan, month_gan, month_zhi, gender, lunar):
     
     return dayun_ganzhi, start_age, start_year, start_month
 
-def update_shishen_from_excel(file_path):
-    # 读取天干十神表
-    tg_df = pd.read_excel(file_path, sheet_name='天干十神', index_col=0)
-    for ri_gan in tg_df.index:
-        for other_gan in tg_df.columns:
-            shishen_map[(ri_gan, other_gan)] = tg_df.at[ri_gan, other_gan]
+# def update_shishen_from_excel(file_path):
+#     # 读取天干十神表
+#     tg_df = pd.read_excel(file_path, sheet_name='天干十神', index_col=0)
+#     for ri_gan in tg_df.index:
+#         for other_gan in tg_df.columns:
+#             shishen_map[(ri_gan, other_gan)] = tg_df.at[ri_gan, other_gan]
     
-    # 读取地支十神表
-    dz_df = pd.read_excel(file_path, sheet_name='地支十神', index_col=0)
-    for ri_gan in dz_df.index:
-        for zhi in dz_df.columns:
-            dizhi_shishen[zhi][ri_gan] = dz_df.at[ri_gan, zhi]
+#     # 读取地支十神表
+#     dz_df = pd.read_excel(file_path, sheet_name='地支十神', index_col=0)
+#     for ri_gan in dz_df.index:
+#         for zhi in dz_df.columns:
+#             dizhi_shishen[zhi][ri_gan] = dz_df.at[ri_gan, zhi]
 
 def check_fuyin(dizhi_list):
     """检查地支伏吟"""
@@ -424,7 +424,7 @@ def check_sixing(dizhi_list):
 def main():
     while True:  # 添加循环
         # 在程序开始时打印检查信息
-        update_shishen_from_excel('十神关系表.xlsx')
+        # update_shishen_from_excel('十神关系表.xlsx')
         
         # 获取用户输入的阳历年月日时
         print("请输入阳历年月日时(格式:年 月 日 时),如 1990 1 1 12:")
